@@ -1,0 +1,122 @@
+
+.superadmin-login-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.superadmin-login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e0eee8;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(6, 91, 80, 0.10);
+}
+
+.superadmin-login-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: #e4f5ed;
+  font-size: 38px;
+}
+
+.superadmin-login-card h1 {
+  margin: 0 0 8px;
+  color: #102d3f;
+  font-size: 27px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.superadmin-login-brand {
+  margin: 0 0 28px;
+  color: #718096;
+  text-align: center;
+  font-size: 14px;
+}
+
+.superadmin-login-card label {
+  display: block;
+  margin: 17px 0 8px;
+  color: #253b4b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.superadmin-login-card input {
+  width: 100%;
+  min-height: 49px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid #dfeae5;
+  border-radius: 11px;
+  background: #fbfdfc;
+  color: #102d3f;
+  font-size: 14px;
+  outline: none;
+}
+
+.superadmin-login-card input:focus {
+  border-color: #087e70;
+  box-shadow: 0 0 0 3px rgba(8, 126, 112, 0.12);
+}
+
+.superadmin-login-card button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #087e70, #065b50);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.superadmin-login-card button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(8, 126, 112, 0.2);
+}
+
+.superadmin-login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.superadmin-login-message {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 9px;
+  background: #fff1f0;
+  color: #b42318;
+  text-align: center;
+  font-size: 13px;
+}
+
+.superadmin-login-card small {
+  display: block;
+  margin-top: 25px;
+  color: #718096;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .superadmin-login-card {
+    padding: 25px 20px;
+  }
+
+  .superadmin-login-card h1 {
+    font-size: 23px;
+  }
+}

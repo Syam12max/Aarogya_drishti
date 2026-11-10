@@ -1,0 +1,152 @@
+
+/* Super Admin Dashboard */
+
+.admin-login-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f4f7f5;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.admin-login-card h1,
+.admin-login-card h2 {
+  color: #145c3b;
+  margin-bottom: 20px;
+}
+
+.admin-login-card h3 {
+  color: #245b43;
+  margin-top: 25px;
+}
+
+.admin-login-card button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #176b45;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-login-card button:hover {
+  background: #104d32;
+}
+
+.admin-login-card input,
+.admin-login-card select,
+.admin-login-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border: 1px solid #d5ded8;
+  border-radius: 7px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.admin-login-card input:focus,
+.admin-login-card select:focus,
+.admin-login-card textarea:focus {
+  outline: none;
+  border-color: #23865a;
+  box-shadow: 0 0 0 3px rgba(35, 134, 90, 0.1);
+}
+
+/* Dashboard sections */
+
+.admin-login-card section {
+  margin-top: 28px;
+  padding: 20px;
+  background: #f8fbf9;
+  border: 1px solid #e2ebe5;
+  border-radius: 12px;
+}
+
+.admin-login-card table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.admin-login-card th,
+.admin-login-card td {
+  padding: 13px;
+  border-bottom: 1px solid #e5ece7;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-login-card th {
+  background: #eaf3ed;
+  color: #174e35;
+  font-weight: 700;
+}
+
+.admin-login-card tr:hover {
+  background: #f6faf7;
+}
+
+/* Status messages */
+
+.admin-login-message {
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 7px;
+  background: #fff4df;
+  color: #80520a;
+}
+
+/* Forms */
+
+.admin-login-card form {
+  max-width: 650px;
+}
+
+.admin-login-card label {
+  display: block;
+  margin-top: 12px;
+  color: #34483c;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  .admin-login-page {
+    padding: 12px;
+  }
+
+  .admin-login-card {
+    padding: 18px;
+  }
+
+  .admin-login-card section {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .admin-login-card table {
+    min-width: 600px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 23px;
+  }
+}

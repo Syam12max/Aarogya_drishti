@@ -1,0 +1,514 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Noto Sans Telugu', sans-serif;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+/* MAIN HOME PAGE */
+
+.premium-home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* LEFT HOSPITAL IMAGE */
+
+.hospital-visual {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #dceff0;
+}
+
+.hospital-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+
+.hospital-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 35, 58, 0.12),
+    transparent 35%,
+    rgba(3, 35, 58, 0.78)
+  );
+}
+
+.image-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.image-brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #079b63;
+  font-size: 28px;
+}
+
+.image-caption {
+  max-width: 520px;
+  margin-bottom: 25px;
+}
+
+.caption-tag {
+  display: inline-block;
+  padding: 8px 13px;
+  border-radius: 30px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.4);
+  backdrop-filter: blur(8px);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.image-caption h1 {
+  margin: 20px 0 14px;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.image-caption p {
+  max-width: 440px;
+  color: #e4f5f8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.image-bottom-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.image-bottom-label span {
+  color: #55e5ad;
+  font-size: 22px;
+}
+
+/* RIGHT PANEL */
+
+.access-panel {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 80px clamp(25px, 5vw, 75px);
+  background:
+    radial-gradient(circle at 90% 5%, #e3f8ef, transparent 32%),
+    #f8fcff;
+}
+
+.top-language {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  border: 1px solid #e2edf2;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 5px 18px rgba(16,60,90,.08);
+}
+
+.top-language select {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #123e67;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.access-content {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+}
+
+/* LOGO */
+
+.main-brand {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.brand-symbol {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 15px;
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #0aa6bd, #087c60);
+  color: white;
+  box-shadow: 0 12px 25px rgba(7,142,135,.2);
+}
+
+.brand-symbol span {
+  font-size: 43px;
+  font-weight: 800;
+}
+
+.main-brand h1 {
+  margin: 0;
+  color: #103c70;
+  font-size: clamp(30px, 3.2vw, 43px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.main-brand h1 span {
+  color: #079b63;
+}
+
+.brand-underline {
+  width: 75%;
+  height: 3px;
+  margin: 17px auto 15px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0c9dc5, #14ae77);
+}
+
+.main-brand p {
+  color: #71869a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* BUTTON CARDS */
+
+.access-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.access-card {
+  width: 100%;
+  min-height: 103px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border: 1px solid transparent;
+  border-radius: 19px;
+  text-align: left;
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: 0 9px 20px rgba(21,54,87,.08);
+}
+
+.access-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 28px rgba(21,54,87,.13);
+}
+
+.registration-card {
+  background: linear-gradient(110deg,#e3f8eb,#effbf5);
+  border-color: #d8f1e2;
+}
+
+.login-card {
+  background: linear-gradient(110deg,#e1f3ff,#edf8ff);
+  border-color: #d5ebfb;
+}
+
+.super-card {
+  background: linear-gradient(110deg,#eeeaff,#f5f1ff);
+  border-color: #e8e1fb;
+}
+
+.access-icon {
+  width: 63px;
+  height: 63px;
+  min-width: 63px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg,#0aae69,#078d55);
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 5px 12px rgba(0,0,0,.12);
+}
+
+.login-card .access-icon {
+  background: linear-gradient(145deg,#20a9e8,#0879cb);
+}
+
+.super-card .access-icon {
+  background: linear-gradient(145deg,#9876e8,#704bc0);
+}
+
+.access-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.access-text strong {
+  color: #10356b;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.access-text small {
+  color: #45647f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.access-arrow {
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: white;
+  color: #123e70;
+  font-size: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.06);
+}
+
+/* FOOTER */
+
+.access-footer {
+  margin-top: 38px;
+  text-align: center;
+  color: #94a6b6;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.access-footer p {
+  margin-top: 9px;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+/* ROLE SELECTION */
+
+.role-page {
+  min-height: 100vh;
+  padding: 35px;
+  background:
+    radial-gradient(circle at top right,#dff6ee,transparent 35%),
+    #f4f8fc;
+}
+
+.role-container {
+  max-width: 900px;
+  margin: 55px auto;
+  padding: 35px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 12px 40px rgba(15,55,90,.08);
+}
+
+.role-container h1 {
+  color: #103c70;
+  font-size: 32px;
+}
+
+.role-container > p {
+  color: #71869a;
+  margin-bottom: 30px;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 16px;
+}
+
+.role-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #e0eaf1;
+  border-radius: 14px;
+  background: white;
+  color: #163e65;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: .2s;
+}
+
+.role-card:hover {
+  transform: translateY(-3px);
+  border-color: #0c9e9c;
+  background: #f4fcfb;
+}
+
+.role-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #e9f5f7;
+  font-size: 23px;
+}
+
+.role-arrow {
+  margin-left: auto;
+  font-size: 25px;
+  color: #0b9c91;
+}
+
+/* AUTH PAGES */
+
+.auth-page {
+  min-height: 100vh;
+  padding: 25px;
+  background: #f1f7fa;
+}
+
+.back-home-btn {
+  padding: 11px 18px;
+  margin-bottom: 25px;
+  border: 1px solid #dce8ef;
+  border-radius: 9px;
+  background: white;
+  color: #16486d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-home-btn:hover {
+  background: #e8f7f5;
+}
+
+.pending-container {
+  text-align: center;
+}
+
+.pending-icon {
+  font-size: 55px;
+}
+
+.primary-action {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 9px;
+  background: #087f86;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .premium-home {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-visual {
+    min-height: 470px;
+  }
+
+  .access-panel {
+    min-height: 650px;
+    padding: 90px 25px 40px;
+  }
+
+  .access-content {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hospital-visual {
+    min-height: 400px;
+  }
+
+  .hospital-image-overlay {
+    padding: 25px;
+  }
+
+  .image-caption h1 {
+    font-size: 35px;
+  }
+
+  .access-panel {
+    padding: 85px 18px 35px;
+  }
+
+  .access-card {
+    min-height: 90px;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .access-icon {
+    width: 51px;
+    height: 51px;
+    min-width: 51px;
+    font-size: 22px;
+  }
+
+  .access-text strong {
+    font-size: 15px;
+  }
+
+  .access-text small {
+    font-size: 11px;
+  }
+
+  .role-page {
+    padding: 15px;
+  }
+
+  .role-container {
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,186 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+/* MAIN CONTAINER */
+
+.district-login-container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 18px;
+  background:
+    radial-gradient(circle at 10% 10%, #e2f0e8, transparent 35%),
+    linear-gradient(135deg, #f4f7ef, #edf4f1);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* LOGIN CARD */
+
+.district-login-card {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  padding: 42px;
+  background: #ffffff;
+  border: 1px solid #e4ece6;
+  border-radius: 24px;
+  box-shadow: 0 20px 55px rgba(18, 63, 50, 0.10);
+}
+
+/* LOGIN ICON */
+
+.district-login-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 21px;
+  background: #e6f2e9;
+  color: #123f32;
+  font-size: 36px;
+}
+
+/* HEADING */
+
+.district-login-card h2 {
+  margin: 0;
+  text-align: center;
+  color: #123f32;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+/* DESCRIPTION */
+
+.district-login-card > p {
+  margin: 12px 0 30px;
+  text-align: center;
+  color: #78877f;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FORM */
+
+.district-login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABELS */
+
+.district-login-card label {
+  margin: 15px 0 8px;
+  color: #344a3e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* INPUTS */
+
+.district-login-card input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 51px;
+  padding: 14px 16px;
+  border: 1px solid #dce8df;
+  border-radius: 12px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: #253b4b;
+  background: #f9fbf9;
+  transition: all 0.2s ease;
+}
+
+.district-login-card input::placeholder {
+  color: #a0aaa3;
+}
+
+.district-login-card input:focus {
+  border-color: #32856b;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(50, 133, 107, 0.12);
+}
+
+/* LOGIN BUTTON */
+
+.district-login-card button {
+  margin-top: 26px;
+  min-height: 51px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #123f32, #237052);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.district-login-card button:hover {
+  background: linear-gradient(135deg, #0b3027, #185d43);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(18, 63, 50, 0.20);
+}
+
+.district-login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ERROR MESSAGE */
+
+.district-login-error {
+  margin-top: 16px;
+  padding: 13px;
+  border: 1px solid #f1d0cc;
+  border-radius: 10px;
+  background: #fff3f1;
+  color: #b33d35;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+
+.district-login-footer {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0e9;
+  text-align: center;
+  color: #89978e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .district-login-container {
+    padding: 22px 14px;
+  }
+
+  .district-login-card {
+    padding: 28px 21px;
+    border-radius: 20px;
+  }
+
+  .district-login-card h2 {
+    font-size: 23px;
+  }
+
+  .district-login-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+  }
+}

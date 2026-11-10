@@ -1,0 +1,757 @@
+
+/* ==========================================
+   AAROGYA DRISHTI - DISTRICT ADMIN PREMIUM UI
+   MATCHED WITH CURRENT DistrictDashboard.js
+========================================== */
+
+.district-dashboard {
+  display: flex !important;
+  min-height: 100vh;
+  width: 100%;
+  background: #f3f7f5;
+  color: #233b38;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+.district-dashboard .sidebar {
+  width: 265px;
+  min-width: 265px;
+  min-height: 100vh;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  background: #0b3f3d;
+  color: #fff;
+}
+
+.district-dashboard .sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 8px 28px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.district-dashboard .brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #d5b76a;
+  color: #0b3f3d;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.district-dashboard .sidebar-brand h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+}
+
+.district-dashboard .sidebar-brand span {
+  display: block;
+  margin-top: 5px;
+  color: #c0d5ce;
+  font-size: 10px;
+}
+
+.district-dashboard .sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 25px;
+}
+
+.district-dashboard .menu-item {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 13px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #d3e4df;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  transition: .2s ease;
+}
+
+.district-dashboard .menu-item:hover {
+  background: rgba(255,255,255,.1);
+  color: white;
+}
+
+.district-dashboard .menu-item.active {
+  background: rgba(255,255,255,.15);
+  color: white;
+  border-left: 3px solid #d5b76a;
+  font-weight: 700;
+}
+
+.district-dashboard .menu-icon {
+  width: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.district-dashboard .sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.district-dashboard .sidebar-bottom button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.district-dashboard .sidebar-bottom button:hover {
+  background: rgba(255,255,255,.12);
+}
+
+.district-dashboard .dashboard-main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 34px;
+  overflow-x: hidden;
+}
+
+.district-dashboard .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 65px;
+  margin-bottom: 28px;
+  padding: 12px 22px;
+  border: 1px solid #e4ece8;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(11,63,61,.04);
+}
+
+.district-dashboard .topbar span {
+  display: block;
+  margin-bottom: 5px;
+  color: #788b86;
+  font-size: 11px;
+}
+
+.district-dashboard .topbar strong {
+  color: #0b3f3d;
+  font-size: 14px;
+}
+
+.district-dashboard .dashboard-content {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.district-dashboard .page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.district-dashboard .page-heading h1,
+.district-dashboard .page-heading h2 {
+  margin: 0;
+  color: #0b3f3d;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.district-dashboard .page-heading p {
+  margin: 8px 0 0;
+  color: #788b86;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.district-dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.district-dashboard .stat-card {
+  padding: 23px;
+  border: 1px solid #e4ece8;
+  border-radius: 13px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(11,63,61,.04);
+  transition: .2s ease;
+}
+
+.district-dashboard .stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(11,63,61,.09);
+}
+
+.district-dashboard .stat-card span {
+  color: #788b86;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.district-dashboard .stat-card h2 {
+  margin: 15px 0 0;
+  color: #0b6259;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.district-dashboard .dashboard-panel {
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid #e4ece8;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(11,63,61,.04);
+}
+
+.district-dashboard .dashboard-panel h2 {
+  color: #0b3f3d;
+  font-size: 18px;
+}
+
+.district-dashboard .quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.district-dashboard .quick-actions button {
+  min-height: 55px;
+  padding: 13px;
+  border: 1px solid #dcebe1;
+  border-radius: 9px;
+  background: #eff8f2;
+  color: #176b45;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.district-dashboard .quick-actions button:hover {
+  background: #0b6259;
+  color: white;
+}
+
+.district-dashboard .refresh-btn {
+  padding: 11px 18px;
+  border: 1px solid #cce6d5;
+  border-radius: 8px;
+  background: #edf7f0;
+  color: #167548;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.district-dashboard .refresh-btn:hover {
+  background: #0b6259;
+  color: white;
+}
+
+.district-dashboard .search-input {
+  width: 100%;
+  max-width: 500px;
+  min-height: 46px;
+  margin: 8px 0 20px;
+  padding: 12px 16px;
+  border: 1px solid #dce8e1;
+  border-radius: 9px;
+  background: white;
+  color: #233b38;
+  font-size: 13px;
+  outline: none;
+}
+
+.district-dashboard .search-input:focus {
+  border-color: #16877b;
+  box-shadow: 0 0 0 3px rgba(22,135,123,.1);
+}
+
+.district-dashboard .table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e4ece8;
+  border-radius: 12px;
+  background: white;
+}
+
+.district-dashboard table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.district-dashboard thead {
+  background: #eff8f2;
+}
+
+.district-dashboard th {
+  padding: 15px;
+  border-bottom: 1px solid #dcebe1;
+  color: #286344;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.district-dashboard td {
+  padding: 15px;
+  border-bottom: 1px solid #edf2ee;
+  color: #52645a;
+  font-size: 12px;
+}
+
+.district-dashboard tbody tr:hover {
+  background: #f6fbf7;
+}
+
+.district-dashboard tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.district-dashboard td button {
+  padding: 8px 13px;
+  border: 1px solid #c9e7d3;
+  border-radius: 7px;
+  background: #e8f6ed;
+  color: #137448;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.district-dashboard td button:hover {
+  background: #167c4d;
+  color: white;
+}
+
+.district-dashboard .action-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.district-dashboard .action-buttons button {
+  background: #167b5c;
+  color: white;
+  border: none;
+}
+
+.district-dashboard .action-buttons .reject-btn,
+.district-dashboard .reject-btn {
+  background: #b94b4b;
+  color: white;
+  border: none;
+}
+
+.district-dashboard .error-message {
+  margin: 12px 0;
+  padding: 13px 16px;
+  border: 1px solid #f2cccc;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #a33333;
+  font-size: 12px;
+}
+
+.district-dashboard .success-message {
+  margin: 12px 0;
+  padding: 13px 16px;
+  border: 1px solid #cce8d4;
+  border-radius: 8px;
+  background: #eaf7ee;
+  color: #176b45;
+  font-size: 12px;
+}
+
+.district-dashboard .empty-state {
+  padding: 35px 20px;
+  border: 1px dashed #cfe3d5;
+  border-radius: 12px;
+  background: #f8fcf9;
+  color: #718579;
+  font-size: 13px;
+  text-align: center;
+}
+
+.district-dashboard .tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.district-dashboard .tab-buttons button {
+  padding: 11px 20px;
+  border: 1px solid #dcebe1;
+  border-radius: 8px;
+  background: white;
+  color: #52645a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.district-dashboard .tab-buttons button.active {
+  border-color: #0b6259;
+  background: #0b6259;
+  color: white;
+}
+
+.district-dashboard .modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(11,35,29,.6);
+}
+
+.district-dashboard .modal-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 25px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.district-dashboard .modal-card h2 {
+  color: #0b3f3d;
+}
+
+.district-dashboard .modal-card textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid #dce8e1;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.district-dashboard .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.district-dashboard .modal-actions button {
+  padding: 10px 17px;
+  border: 1px solid #dce8e1;
+  border-radius: 7px;
+  background: #edf7f0;
+  color: #176b45;
+  font-weight: 700;
+}
+
+.district-dashboard .patient-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.district-dashboard .patient-profile-field {
+  padding: 16px;
+  border: 1px solid #e4ece8;
+  border-radius: 10px;
+  background: #f8fcf9;
+}
+
+.district-dashboard .patient-profile-field small {
+  display: block;
+  margin-bottom: 8px;
+  color: #788b86;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.district-dashboard .patient-profile-field strong {
+  color: #0b3f3d;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.district-dashboard .patient-profile-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.district-dashboard .patient-profile-heading h3 {
+  margin: 0;
+  color: #145c36;
+  font-size: 19px;
+}
+
+.district-dashboard .patient-medical-history,
+.district-dashboard .patient-screening-history {
+  margin-top: 25px;
+  padding: 22px;
+  border: 1px solid #dceee2;
+  border-radius: 15px;
+  background: #f8fcf9;
+}
+
+.district-dashboard .patient-medical-history-list {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 15px;
+}
+
+.district-dashboard .patient-medical-history-card {
+  padding: 18px;
+  border: 1px solid #e1eee5;
+  border-left: 4px solid #159653;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 14px rgba(20,92,54,.05);
+}
+
+.district-dashboard .patient-medical-history-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.district-dashboard .patient-medical-history-top strong {
+  color: #08743e;
+  font-size: 12px;
+}
+
+.district-dashboard .patient-medical-history-top span {
+  color: #788b86;
+  font-size: 11px;
+}
+
+.district-dashboard .patient-medical-history-card p {
+  color: #34483b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.district-dashboard .patient-medical-history-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #edf2ee;
+}
+
+.district-dashboard .patient-medical-history-meta span {
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #f0f7f2;
+  color: #42614d;
+  font-size: 11px;
+}
+
+.district-dashboard .screening-history-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.district-dashboard .screening-history-summary > div {
+  padding: 16px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: white;
+}
+
+.district-dashboard .screening-history-summary small {
+  display: block;
+  color: #788b86;
+  font-size: 11px;
+}
+
+.district-dashboard .screening-history-summary strong {
+  display: block;
+  margin-top: 8px;
+  color: #145c3b;
+  font-size: 23px;
+}
+
+.district-dashboard .screening-history-group {
+  margin-top: 22px;
+}
+
+.district-dashboard .screening-history-group h4 {
+  color: #145c3b;
+  font-size: 16px;
+}
+
+.district-dashboard .screening-history-list {
+  display: grid;
+  gap: 12px;
+}
+
+.district-dashboard .screening-history-card {
+  padding: 17px;
+  border: 1px solid #e0eae4;
+  border-radius: 11px;
+  background: white;
+}
+
+.district-dashboard .screening-history-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.district-dashboard .screening-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.district-dashboard .screening-history-grid small {
+  display: block;
+  color: #788b86;
+  font-size: 11px;
+}
+
+.district-dashboard .screening-history-grid strong {
+  display: block;
+  margin-top: 6px;
+  color: #263c31;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.district-dashboard .screening-history-card p {
+  color: #52645a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.district-dashboard .screening-status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.district-dashboard .screening-status.accepted {
+  background: #e6f6ed;
+  color: #167346;
+}
+
+.district-dashboard .screening-status.attention {
+  background: #fff4d9;
+  color: #946000;
+}
+
+.district-dashboard pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 16px;
+  border-radius: 9px;
+  background: #f3f7f5;
+  color: #233b38;
+  font-size: 12px;
+}
+
+@media(max-width:1100px) {
+  .district-dashboard .stats-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .district-dashboard .patient-profile-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:768px) {
+  .district-dashboard {
+    flex-direction: column;
+  }
+
+  .district-dashboard .sidebar {
+    width: 100%;
+    min-width: 100%;
+    min-height: auto;
+  }
+
+  .district-dashboard .sidebar-menu {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .district-dashboard .sidebar-bottom {
+    margin-top: 18px;
+  }
+
+  .district-dashboard .dashboard-main {
+    padding: 20px 15px;
+  }
+
+  .district-dashboard .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .district-dashboard .patient-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .district-dashboard .patient-medical-history-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:480px) {
+  .district-dashboard .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .district-dashboard .page-heading h1 {
+    font-size: 21px;
+  }
+
+  .district-dashboard .sidebar-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .district-dashboard .dashboard-panel {
+    padding: 16px;
+  }
+
+  .district-dashboard .patient-medical-history,
+  .district-dashboard .patient-screening-history {
+    padding: 15px;
+  }
+}
